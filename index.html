@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aiden Castelino Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Aiden Castelino</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/Aiden_image_bgremoved.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">HELLO!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Aiden Castelino</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Computer Engineer  ',
+						'Data Enthusiast  ',
+						'Data Analyst   ',
+						'Data Engineer  ',
+						'Data Scientist   '
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Big Data Consultant</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/aiden-castelino-61570a222/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/vion30/About-Me" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/fotor-20250323163053.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Aiden Vion Castelino</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Big Data Consultant</span></p>
+										<p><span class="title-s">Education: </span> <span>BE Computer</span></p>
+										<p><span class="title-s">Address: </span> <span>Maharashtra, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Power BI</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Power Query & DAX</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Warehousing</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>A Data Analytics professional currently working as a Big Data Consultant, specializing in Power BI, SQL, and Data Warehousing. 
+									With hands-on experience in data modeling, ETL workflows, and business intelligence, 
+									I build interactive dashboards and derive actionable insights for data-driven decision-making. 
+									Skilled in PowerBI, Power Query, SQL, Python Big Data Consulting | Data Analytics | Business Intelligence, SSIS, and data governance, I ensure data accuracy and security in dynamic business environments. 
+									Passionate about solving real-world challenges with analytics, 
+									I am always eager to collaborate on data visualization, machine learning, and AI-driven projects.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Big Data Consulting | Data Analytics | Business Intelligence</span></li>
+									<li class="d-flex"><span>Analytical :</span> <span> Power BI, Tableau, Advanced Excel, Power Query</span></li>
+									<li class="d-flex"><span>Programming :</span> <span>DAX, Python, C, C++, Java, HTML &amp; CSS</span></li>
+									<li class="d-flex"><span>Database :</span> <span>MySQL, Microsoft SQL Server, PostgreSQL &amp; SSIS (ETL Pipelines)</span></li>
+									<li class="d-flex"><span>Softwares :</span> <span> Jupyter, Anaconda, MS Excel, MS Office, Git &amp; GitHub</span></li>
+									<li class="d-flex"><span>Soft Skills :</span> <span> Client Communication, Problem-Solving, Critical Thinking, Stakeholder Management, Adaptability  &amp; Team Collaboration</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/aiden-castelino-61570a222/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+			<h5>Big Data Consultant | Data Analytics | Business Intelligence</h5>
+            <p> Passionate about leveraging data analytics, business intelligence, and data engineering to drive decision-making. 
+				Experienced in developing interactive Power BI dashboards, managing ETL workflows (SSIS), and optimizing SQL databases. 
+				Strong problem-solving abilities with expertise in Power BI, SQL, Python, and Data Warehousing to provide actionable insights for businesses.</p>
+          </div>
+        </div>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/file/d/1x2SPma8THyunhlQm38A1TsXlqWn_XmmE/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+		
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+			<!-- RBHU Big Data Consultant -->
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">February 2025 - Present</span>
+					<h2>Big Data Consultant</h2>
+					<span class="position">
+						<a href="https://www.rbhu.in/" target="_blank">RBHU ETG Analytics</a>
+					</span>
+					<p class="mt-4">
+						<ul>
+							<li>Lead dashboard development for ADAMA Australia across Finance, IT, Supply Chain, and Sales.</li>
+							<li>Build Power BI dashboards with advanced data modeling and visualization.</li>
+							<li>Implement ETL workflows using SQL Server (SSMS) and SSIS for data warehousing.</li>
+							<li>Work with client managers to gather requirements and develop analytics solutions.</li>
+							<li>Ensure data security and compliance with Row-Level Security (RLS) policies.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+			
+		
+			<!-- Edureka Data Analyst Intern -->
+<div class="col-md-6">
+    <div class="resume-wrap ftco-animate">
+        <span class="date">January 2025 - February 2025</span>
+        <h2>Data Science Intern</h2>
+        <span class="position">
+            <a href="https://drive.google.com/file/d/1Q74nud7ERQX2i3ws0joFkN-nrBqNKgAY/view?usp=sharing" target="_blank">Edureka</a>
+        </span>
+        <p class="mt-4">
+            <ul>
+                <li>Gained hands-on experience in SQL for data extraction, transformation, and analysis.</li>
+                <li>Worked on a structured Data Science project, applying statistical analysis and machine learning concepts.</li>
+                <li>Developed Power BI dashboards to visualize insights from structured datasets.</li>
+                <li>Successfully completed the project within the stipulated timeline, ensuring high-quality deliverables.</li>
+                <li>Collaborated with mentors and peers to refine data models and improve analytical accuracy.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+		
+			<!-- Dead Of Writes Jr Web Developer -->
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">June 2022 - July 2022</span>
+					<h2>Jr Web Developer</h2>
+					<span class="position">
+						<a href="https://drive.google.com/file/d/1mwFeWuSZRzZSBlO4uIoghvTm1LvECT4f/view?usp=sharing" target="_blank">Dead Of Writes Publication</a>
+					</span>
+					<p class="mt-4">
+						<ul>
+							<li>Led the creation of Dead Of Writes Publications' website in collaboration with a Senior Developer and UI/UX team.</li>
+							<li>Developed front-end web pages based on UI designs and ensured a seamless user experience.</li>
+							<li>Utilized HTML, CSS, and JavaScript to implement design features effectively.</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2024</span>
+    					<h2>Bachelor of Engineering in Computer</h2>
+						<h2>with Honors in Cyber Security</h2>
+    					<span class="position"> 
+							<a href="https://www.fcrit.ac.in/" target="_blank">Fr. C. Rodrigues Institute of Technology - </a></span>
+							<span class="position"> 
+								<a href="https://mu.ac.in/" target="_blank">University Of Mumbai</a></span>
+    					<p class="mt-4">CGPA: 9.12 / 10</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2020</span>
+    					<h2>Higher Secondary School</h2>
+						<h2>HSC - PCME</h2>
+    					<span class="position">
+							<a href="https://www.agnelhamara.net/" target="_blank">Fr. Agnel Multipurpose School & Jr College - </a></span>
+							<span class="position"> 
+								<a href="https://mahahsscboard.in/en" target="_blank">Maharashtra State Board</a></span>
+    					<p class="mt-4">Percentage: 83.23%</p>
+    				</div>
+				</div>
+    		</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2018</span>
+					<h2>Secondary School Certificate</h2>
+					<h2>SSC</h2>
+					<span class="position">
+						<a href="https://www.besadmin.org/trusts-societies/2-the-bethany-society-panvel-maharashtra/296-1-bethany-convent-school-panvel/350-bethany-convent-school-panvel" target="_blank">Bethany Convent School</a></span>
+					<p class="mt-4">Percentage: 90.80% </p>
+				</div>
+			</div>
+		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1x2SPma8THyunhlQm38A1TsXlqWn_XmmE/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics & Data Science projects on Power BI, SQL, Python & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://www.adama.com/australia/en" class="block-20 zoom-effect" style="background-image: url('images/adamabig.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading">
+							<a href="https://www.adama.com/australia/en">
+								Enterprise Dashboards for ADAMA Australia (Power BI, SQL, SSIS) – Rbhu Analytics
+							</a>
+						</h3>
+						<p>Developed as part of my role at Rbhu Analytics, this project involved designing cross-functional Power BI dashboards for Finance, IT, Supply Chain, and Sales. Implemented ETL workflows using SQL and SSIS for efficient data integration, ensuring data security with Row-Level Security (RLS).</p>
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/vion30/Blinkit-Sales-Analysis-with-Power-BI" class="block-20 zoom-effect" style="background-image: url('images/BlinkIT.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/vion30/Blinkit-Sales-Analysis-with-Power-BI">Blinkit Sales Analysis Dashboard</a></h3>
+						<p>Developed an interactive Power BI dashboard to analyze Blinkit's sales trends, outlet performance, and geographical distribution. This project leverages dynamic visualizations and custom DAX measures to provide actionable insights for strategic business decisions.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/vion30/Sales-Analysis-Dashboard-with-Power-BI-and-MySQL" class="block-20 zoom-effect" style="background-image: url('images/sales_dashboard.jpeg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/vion30/Sales-Analysis-Dashboard-with-Power-BI-and-MySQL">Sales Analysis Dashboard with Power BI & MySQL</a></h3>
+						<p>Developed a comprehensive sales analysis dashboard using Power BI, integrating data from a MySQL database to provide actionable insights into sales performance. The project features database integration, interactive visualizations, SQL-based data manipulation, and real-time updates for data-driven decision-making.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/vion30/Twitter-Analysis-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/Twitter.png');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/vion30/Twitter-Analysis-Dashboard">Twitter Analysis Dashboard</a></h3>
+						<p>Utilized Power BI to analyze Twitter data, revealing trends in tweet count, impressions, engagement rates, and media interactions. Cleaned and preprocessed data for accuracy, providing interactive dashboards to optimize content strategies through data-driven insights.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/vion30/Road-Accident-Severity-Dashboard-using-Tableau" class="block-20 zoom-effect" style="background-image: url('images/Road_accident.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="https://github.com/vion30/Road-Accident-Severity-Dashboard-using-Tableau">Road Accident Severity Dashboard using Tableau</a></h3>
+						<p>Developed an interactive Tableau dashboard to analyze road accident trends, severity levels, and key contributing factors. The project provides actionable insights through detailed visualizations, leveraging Microsoft Excel for data preprocessing and Tableau for dynamic dashboards.</p>
+					</div>
+				</div>
+			</div>
+			
+			
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/vion30/Data-Analysis-Project-/tree/main" class="block-20 zoom-effect" style="background-image: url('images/Aiden_proj-1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/vion30/Data-Analysis-Project-/tree/main">Travel Aggregator Analysis using Python</a></h3>
+                <p>The project analyzes booking and search data to uncover user behavior patterns, focusing on key metrics to identify trends that improve decision-making and user experience.</p>
+              </div>
+            </div>
+          </div>
+	</div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+		
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+ s             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/vion30/About-Me" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Navi Mumbai, Maharashtra, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 9323912083</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">aidencastelino544@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1x2SPma8THyunhlQm38A1TsXlqWn_XmmE/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg1eTHpSY5vwT5BNzAmzuvrWHJqeHbA1gjraCzCexK3lttag/viewform?usp=sf_link" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/aiden-castelino-61570a222/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/AidenCastelino"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/aidenvion.castelino"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/aidenvion/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ <!--
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center"> -->
+  
+			<!--<p>--><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><!--</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>-->
+	
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
